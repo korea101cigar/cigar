@@ -21,5 +21,5 @@ spec:
     helm:
       valueFiles:
       - Values.yaml
-      - ../../../projects/zjky/global.yaml
-      - ../../../projects/zjky/albert-agent/albert-agent-2.yaml
+        #      - ../../../projects/tank/global.yaml
+        #      - ../../../projects/tank/tank-order/tank-order.yaml
