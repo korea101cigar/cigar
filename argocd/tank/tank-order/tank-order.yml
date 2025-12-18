@@ -20,6 +20,6 @@ spec:
     path: charts/tank-order/tank-order
     helm:
       valueFiles:
-      - Values.yaml
+      - values.yaml
         #      - ../../../projects/tank/global.yaml
         #      - ../../../projects/tank/tank-order/tank-order.yaml
