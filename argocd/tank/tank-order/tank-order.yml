@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tank-order
+  namespace: argocd
+spec:
+  syncPolicy:
+    #automated: {}
+    syncOptions:
+    - CreateNamespace=true
+    - ServerSideApply=true
+    - RespectIgnoreDifferences=true
+  project: tank
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: tank
+  sources:
+  - repoURL: 'git@github.com:korea101cigar/cigar.git'
+    targetRevision: main
+    path: charts/tank-order/tank-order
+    helm:
+      valueFiles:
+      - Values.yaml
+      - ../../../projects/zjky/global.yaml
+      - ../../../projects/zjky/albert-agent/albert-agent-2.yaml
