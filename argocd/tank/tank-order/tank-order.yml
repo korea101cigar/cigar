@@ -21,5 +21,4 @@ spec:
     helm:
       valueFiles:
       - values.yaml
-        #      - ../../../projects/tank/global.yaml
-        #      - ../../../projects/tank/tank-order/tank-order.yaml
+      - ../../../projects/ucs/tank-order/tank-order.yaml
